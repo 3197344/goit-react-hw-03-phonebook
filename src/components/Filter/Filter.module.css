@@ -1,0 +1,24 @@
+.section {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    list-style: none;
+    
+}
+
+.section_input {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.section_label {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.section_input:hover {
+    box-shadow: 4px 4px 8px rgba(31, 31, 31, 0.3);
+}
