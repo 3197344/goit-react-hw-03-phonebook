@@ -17,6 +17,18 @@ state = {
   filter: '',
 }
 
+  componentDidMount() {
+  const contactsFromLocalStorage = JSON.parse(localStorage.getItem("contacts"));
+    if (contactsFromLocalStorage) {
+      this.setState({ contacts: contactsFromLocalStorage })
+    };
+  }
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.contacts !== prevState.contacts) {
+      localStorage.setItem("contacts", JSON.stringify(this.state.contacts))
+    }
+  };
+  
 delContact = contactId => {
     const state = this.state;
     const visibleContacts = state.contacts.filter(
